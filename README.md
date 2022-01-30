@@ -1,66 +1,41 @@
-# NametagEdit
+# About
+TAB aims to be a superior all-in-one minecraft plugin for displaying information that outperforms all 
+similar plugins in terms of features, performance, compatibility and support.  
+More information can be found at [Why TAB?](https://github.com/NEZNAMY/TAB/wiki/Why-TAB%3F) wiki page.
 
-[![Dev Builds](https://img.shields.io/badge/Jenkins-Development%20Builds-lightgrey.svg)](http://ci.nametagedit.com/job/NametagEdit/)
-[![Support](https://img.shields.io/badge/Minecraft-1.7--1.16-green.svg)](documentation/Support)
-[![Spigot](https://img.shields.io/badge/Spigot-Project%20Page-yellow.svg)](https://www.spigotmc.org/resources/nametagedit.3836/)
-[![JDK](https://img.shields.io/badge/JDK-1.8-blue.svg)](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html)
-[![NametagEditAPI](https://img.shields.io/badge/NTE-Developer%20API-ff69b4.svg)](documentation/Developers.creole)
+# Distribution
+As of TAB 3.0.0, released with MC 1.18 (November 30th, 2021), there is no free / premium
+version anymore. Only one version of the plugin exists now, which contains all implemented features
+and is available to everyone for free. However, official support on discord is only provided to 
+those who have purchased the plugin.  
 
-This plugin allows users to add up to 16 characters before and after their name. Individual tags can be created for players, or a group can be created that can be joined via permissions.
+# Compiling
+Compilation requires JDK 8 and up.  
+To compile the plugin, run `./gradlew build` from the terminal.  
+Once the plugin compiles, grab the jar from `/jar/build/libs/` folder.
 
-1.7.x to 1.12.x max 16 characters
+# Links
+The precompiled JAR can be downloaded for free from 
+[github releases](https://github.com/NEZNAMY/TAB/releases)
+and [MC-Market](https://www.mc-market.org/resources/20631/).  
+  
+If you want to show your appreciation for my work, you can purchase the plugin on 
+[MC-Market](https://www.mc-market.org/resources/14009/),
+[Polymart](https://polymart.org/resource/484) or just [send a donation](https://paypal.me/neznamy1).
+  
+Support is provided to buyers on [discord](https://discord.gg/EaSvdk6).  
 
-1.13.x to 1.17.x allows more than 16 characters. :)
+A detailed explanation of all the plugin's functions can be found on the 
+[wiki](https://github.com/NEZNAMY/TAB/wiki).
 
-NametagEdit has support for EssentialsGroupManager, PermissionsEx, zPermissions, LuckPerms and LibsDisguises. If a user changes groups or permissions, their tag is automatically updated.
-
-* [Official Project Page](https://www.spigotmc.org/resources/nametagedit.3836/)
-* [Development Builds](https://ci.nametagedit.com/job/NametagEdit/)
-
-# Quick Links
-* [API & Developers](documentation/Developers.creole)
-* [Permissions](documentation/Permissions.creole)
-* [Commands](documentation/Commands.creole)
-* [Configuration](documentation/Configuration.creole)
-* [Common Issues](documentation/Support.creole)
-
-# Features
-✔ Converters to and from MySQL and FlatFile
-
-✔ Efficient Flatfile support and MySQL connection pooling
-
-✔ PermissionsEX, zPermissions, GroupManager, LuckPerms (https://www.spigotmc.org/resources/luckperms-an-advanced-permissions-plugin.28140/) support
-
-✔ Sortable Group/Player Tags in tab
-
-✔ [MVdW Placeholder API](https://www.spigotmc.org/resources/mvdwplaceholderapi.11182/) Support
-
-✔ [Clip Placeholder API](https://www.spigotmc.org/resources/placeholderapi.6245/) Support 
-
-✔ [Guilds](https://www.spigotmc.org/resources/guilds.66176/) Support 
-
-# Frequently Asked Questions
-#### Q: Will this allow me to change my skin and name?
-**A:** No. This plugin creates fake scoreboard teams with packets.
-
-#### Q: My client crashes with the reason "Cannot remove from ID#". Why is this?
-**A:** Due to how scoreboards were implemented in Minecraft, a player cannot belong to two teams. Any two plugins that use packets or the Bukkit API which alter team prefixes/suffixes will have conflicts. There is currently no way around this.
-
-#### Q: My nametag is cut short, even with LongTags enabled!
-**A:** LongTags is only able to disable a longer nametag in the tablist. The name above your head has a different limit (16 characters for prefix and suffix.) We are unable to change this, as this limit is imposed by Mojang.
-
-#### Q: My nametag is still visible, even when I use an invisibility potion!
-**A:** This is a well known bug in 1.8 Minecraft and below. The issue was fixed in 1.9. The issue occurs because of an ignored data watcher flag (which tells the client what to render, and what not to.) We are unable to fix this.
-
-#### Q: Can I sort nametags in the tab list?
-**A:** Yes. Read up on how to use it [here](documentation/Configuration.creole)
-
-#### Q: NametagEdit doesn't work with Placeholder API related plugins!
-**A:** NametagEdit does not have anything to do with this process. The placeholder API is an interface, and requires OTHER plugins to function. Consult the documentation for your chosen plugin.
-
-# TODO
-
-# Incompatible Plugins
-✖ Any plugin that creates NPCs that share the same username as players who have 'NametagEdit' nametags
-
-✖ Any plugin that uses Team color sidebars without specifically supporting NametagEdit
+# Issues
+The [Issues](https://github.com/NEZNAMY/TAB/issues) section is **only** available for **bug reports**
+or other issues which are not directly a bug (performance issues, errors, etc.).
+Support is provided on discord and feature requests are currently not accepted due to high demand and
+being busy with bug reports, which take priority over new features. 
+We are not looking to add any new major features anymore. 
+We would rather spend time improving existing features instead.  
+  
+When opening a bug report, make sure you provide all necessary information to reproduce the bug,
+otherwise we will not able to fix it. Saying "it only occurs randomly" or "I don't know how to 
+reproduce it" has no value and cannot be converted into actual code.
